@@ -1,0 +1,5 @@
+docker run --name mysql-server -p 3307:3306 -e MYSQL_ROOT_PASSWORD=bancolombia2315 -e MYSQL_DATABASE=productos -d mysql:latest
+
+docker run --name productos -d -e MONGO_INITDB_ROOT_USERNAME=mongouser -e MONGO_INITDB_ROOT_PASSWORD=mongopass -p 27017:27017 mongo:latest
+
+docker run --name mysql-transporte -p 3304:3305 -e MYSQL_ROOT_PASSWORD=bancolombia2315 -e MYSQL_DATABASE=transporte -d mysql:latest

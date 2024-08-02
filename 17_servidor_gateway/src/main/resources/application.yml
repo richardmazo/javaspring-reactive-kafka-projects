@@ -1,0 +1,17 @@
+server:
+  port: 7000
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: serv-productos
+          uri: lb://servicio-productos1
+          predicates:
+            - Path=/sproductos/**
+          filters:
+            - RewritePath=/sproductos/*, /
+            - AddResponseHeader=Access-Control-Allow-Origin, "*"

@@ -22,3 +22,27 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+
+# Ignorar los archivos de compilación de Java
+/target/
+/build/
+/out/
+/*.iml
+/.idea/
+
+# Ignorar los archivos de registro
+*.log
+
+# Ignorar los archivos de configuración local
+*.properties
+
+# Ignorar los archivos de configuración de Gradle
+.gradle/
+
+# Ignorar los archivos de configuración de Maven
+/bin/
+/.mvn/
+
+# Ignorar los archivos de configuración de Spring Boot
+HELP.md
